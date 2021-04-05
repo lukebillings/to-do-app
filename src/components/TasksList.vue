@@ -1,6 +1,11 @@
 <template>
-  <div id="tasks">
-    <p>This is my first Vue.js component</p>
+  <div>
+    <button class="btn round-icon" @click="newFormVisible = !newFormVisible">
+      {{ newFormVisible ? "✕" : "＋" }}
+    </button>
+
+    <NewTask v-if="newFormVisible" @add-task="addTask" />
+
     <div v-if="tasks.length" class="tasks-list">
       <TaskCard
         v-for="(task, index) in tasks"
@@ -8,8 +13,10 @@
         :title="task.title"
         :description="task.description"
         :done="task.done"
+        :task-index="index"
+        @toggle-task="toggleTask"
       />
-
+      <a href="#" @click="resetTasks()" class="reset-link">Reset tasks</a>
     </div>
 
     <p v-else-if="!newFormVisible">You don't have any tasks yet...</p>
@@ -17,40 +24,39 @@
 </template>
 
 <script>
-import TaskCard from './TaskCard';
-
+import TaskCard from "./TaskCard";
+import NewTask from "./NewTask";
 export default {
-  name: 'TasksList',
+  name: "TasksList",
   components: {
-    TaskCard
+    TaskCard,
+    NewTask,
   },
-
-
-data() {
-  return {
-    tasks: [
-      {
-        title: "Create a card component",
-        description:
-          "Create a new TaskCard.vue file in the components folder, then import it in TasksList",
-        done: true,
-      },
-      {
-        title: "Make the card component dynamic",
-        description:
-          "Learn about using the data option and passing data to child components using props",
-        done: true,
-      },
-      {
-        title: "Bind the attributes to the data",
-        description:
-          "Use the v-bind directive to bind the title and description to our data",
-        done: false,
-      },
-    ],
-  };
- },
+  data() {
+    return {
+      tasks: JSON.parse(localStorage.getItem("tasks")) || [],
+      newFormVisible: false,
+    };
+  },
+  watch: {
+    tasks() {
+      localStorage.setItem("tasks", JSON.stringify(this.tasks));
+    },
+  },
+  methods: {
+    addTask(title, description, done = false) {
+      this.tasks.unshift({ title, description, done });
+      this.newFormVisible = false;
+    },
+    toggleTask(taskIndex) {
+      const taskToUpdate = this.tasks[taskIndex];
+      taskToUpdate.done = !taskToUpdate.done;
+      this.$set(this.tasks, taskIndex, taskToUpdate);
+    },
+    resetTasks() {
+      localStorage.setItem("tasks", null);
+      this.tasks = [];
+    },
+  },
 };
 </script>
-
-
