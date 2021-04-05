@@ -19,7 +19,7 @@
       <a href="#" @click="resetTasks()" class="reset-link">Reset tasks</a>
     </div>
 
-    <p v-else-if="!newFormVisible">You don't have any tasks yet...</p>
+    <p v-else-if="!newFormVisible">No tasks today?</p>
   </div>
 </template>
 

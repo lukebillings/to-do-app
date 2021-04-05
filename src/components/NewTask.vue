@@ -5,13 +5,13 @@
         v-model="newTitle"
         @keypress.enter="$refs.descriptionInput.focus()"
         type="text"
-        placeholder="What is your task?"
+        placeholder="What's your task?"
         ref="titleInput"
       />
       <textarea
         v-model="newDescription"
         @keypress.enter="submitTask(newTitle, newDescription), resetForm()"
-        placeholder="Add some details about your task..."
+        placeholder="You can add more info here..."
         ref="descriptionInput"
       ></textarea>
     </div>
@@ -55,7 +55,7 @@ export default {
   animation: expand-vertical 0.2s;
   overflow: hidden;
   background-color: white;
-  border-left: solid 5px #35495e;
+  border-left: solid 5px #1e56a0;
   &,
   &:hover {
     transform: scale(1.1);

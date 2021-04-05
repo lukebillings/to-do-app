@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss">
-$check-color: #41b883;
+$check-color: #1e56a0;
 .checkbox {
   display: flex;
   align-self: center;

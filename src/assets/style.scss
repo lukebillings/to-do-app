@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 
 html {
-  background: rgba(#35495e,0.03);
+  background: #f6f6f6;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+p {
+  font-size: 24px;
 }
 
 #app {
@@ -12,7 +20,7 @@ html {
   text-align: center;
   color: #2c3e50;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 10px;
   max-width: 600px;
 }
 
@@ -29,7 +37,7 @@ input, textarea {
   background: none;
   &:focus {
     outline: none;
-    background-color: rgba(#41B883, 0.1);
+    background-color: rgba(#1e56a0, 0.1);
   }
 }
 
@@ -39,7 +47,7 @@ input, textarea {
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 0.2em;
-  background: linear-gradient(0deg, #35495E, #41B883);
+  background: linear-gradient(0deg, #163172, #1e56a0);
   color: white;
   border: none;
   height: 2.8em;
@@ -73,3 +81,4 @@ input, textarea {
   color: rgba(black, 0.3);
   font-size: 0.9rem;
 }
+
