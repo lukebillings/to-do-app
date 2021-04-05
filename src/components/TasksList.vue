@@ -1,7 +1,17 @@
 <template>
   <div id="tasks">
-    <div class="task-card"></div>
-    <h3>Title of a task</h3>
-    <p>Desciption of task</p>
+    <p>This is my first Vue.js component</p>
+    <TaskCard />
   </div>
 </template>
+
+<script>
+import TaskCard from './TaskCard';
+
+export default {
+  name: 'TasksList',
+  components: {
+    TaskCard
+  }
+};
+</script>

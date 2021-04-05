@@ -9,6 +9,7 @@
   </div>
 </template>
 
+
 <style lang="scss">
 .task-card {
   display: flex;
@@ -32,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  &.done {
+  &.completed {
     border-left: solid 8px rgba(#35495e, 0.3);
     background-color: rgba(#35495e, 0.08);
     h3, p { text-decoration: line-through; opacity: 0.3; }
