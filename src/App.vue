@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" height="100">
-    <h1>Task Manager</h1>
+    <img alt="Task icon" src="./assets/task.svg" height="200">
+    <h1>Tasky</h1>
     <TasksList />
   </div>
 </template>
