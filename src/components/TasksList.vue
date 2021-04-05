@@ -49,6 +49,8 @@ export default {
       this.newFormVisible = false;
     },
     toggleTask(taskIndex) {
+      const audio = new Audio(require('./sound-effect.mp3'));
+      audio.play();
       const taskToUpdate = this.tasks[taskIndex];
       taskToUpdate.done = !taskToUpdate.done;
       this.$set(this.tasks, taskIndex, taskToUpdate);
