@@ -30,11 +30,11 @@ export default {
 .task-card {
   display: flex;
   text-align: left;
-  background-color: saturate(rgba(#41b883, 0.03), 30%);
+  background-color: saturate(rgba(#1e56a0, 0.03), 30%);
   transition: all 0.3s;
   min-height: 6rem;
   border-bottom: solid 1px rgba(#35495e, 0.1);
-  border-left: solid 8px #41b883;
+  border-left: solid 8px #1e56a0;
   p {
     font-size: 0.9rem;
   }
@@ -60,6 +60,7 @@ export default {
       opacity: 0.3;
     }
     &:hover {
+
       transform: unset;
       box-shadow: unset;
     }

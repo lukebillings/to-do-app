@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Task icon" src="./assets/task.svg" height="200">
+    <img alt="Task icon" src="./assets/task.svg" height="150">
     <h1>Tasky</h1>
+    <p>Don't keep it in your head. Pop it down in a task...</p>
     <TasksList />
   </div>
 </template>
