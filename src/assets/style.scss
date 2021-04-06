@@ -77,8 +77,19 @@ input, textarea {
 
 .reset-link {
   display: block;
-  margin-top: 2rem;
-  color: rgba(black, 0.3);
   font-size: 0.9rem;
-}
+  font-weight: 300;
+  background: linear-gradient(0deg, #163172, #1e56a0);
+  color: #f6f6f6;
+  max-width: 100px;
+  margin: auto;
+  padding: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+    &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 3px 10px rgba(black, 0.2);
+  }
 
+}
