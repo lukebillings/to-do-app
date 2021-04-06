@@ -71,7 +71,7 @@ export default {
   }
   textarea {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1.17rem;
     resize: none;
   }
 }
