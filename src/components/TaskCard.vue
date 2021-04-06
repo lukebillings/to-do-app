@@ -36,7 +36,7 @@ export default {
   border-bottom: solid 1px rgba(#35495e, 0.1);
   border-left: solid 8px #1e56a0;
   p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   &:hover {
     background-color: white;
