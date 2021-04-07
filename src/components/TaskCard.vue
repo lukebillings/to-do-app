@@ -3,8 +3,8 @@
     <div>
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
-         <span class='right floated trash icon' v-on:click="deleteTask(task)">
-      <i class='trash icon'> 🗑 </i>
+         <span class='trash-icon' v-on:click="deleteTask(task)">
+      <i class='trash-icon'> 🗑 </i>
     </span>
     </div>
     <Checkbox @click.native="$emit('toggle-task', taskIndex)" :checked="done" />
@@ -77,5 +77,10 @@ methods: {
       box-shadow: unset;
     }
   }
+}
+
+.trash-icon {
+max-width: 27px;
+
 }
 </style>
