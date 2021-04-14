@@ -6,6 +6,9 @@
          <span class='trash-icon' v-on:click="deleteTask(task)">
       <i class='trash-icon'> 🗑 </i>
     </span>
+       <span class='edit-icon' v-on:click="editTask(task)">
+      <i class='edit-icon'>📝</i>
+    </span>
     </div>
     <Checkbox @click.native="$emit('toggle-task', taskIndex)" :checked="done" />
   </div>
@@ -33,6 +36,7 @@ methods: {
     deleteTask(task) {
       this.$emit('delete-task', task);
     },
+
   },
 
 };
